@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+      @apply m-0 p-0 box-border bg-[#80C4E9];
+  }
+}
+
+@layer components {
+  /* Add your custom components here */
+}
+
+@layer utilities {
+  /* Add your custom utilities here */
+}
