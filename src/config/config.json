@@ -1,0 +1,26 @@
+{
+    "connections-folder-directory": "connections/followers_and_following",
+    "required-files": [
+        "blocked_profiles.html",
+        "close_friends.html",
+        "follow_requests_you've_received.html",
+        "followers_1.html",
+        "following.html",
+        "hide_story_from.html",
+        "recent_follow_requests.html",
+        "recently_unfollowed_profiles.html",
+        "removed_suggestions.html"
+    ],
+    "Abbreviations": {
+        "blocked_profiles": "Blocked Profiles",
+        "close_friends": "Close Friends",
+        "follow_requests_you've_received": "Follow Requests",
+        "followers_1": "Followers",
+        "following": "Following",
+        "hide_story_from": "Accounts Who Cannot View Your Story",
+        "recent_follow_requests": "Recent Follow Requests Sent",
+        "recently_unfollowed_profiles": "Recently Unfollowed Accounts",
+        "removed_suggestions": "Removed Suggestions",
+        "not_following_back": "Accounts which don't follow you back"
+    }
+}

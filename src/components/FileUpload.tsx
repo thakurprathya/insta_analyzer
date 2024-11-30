@@ -1,10 +1,11 @@
+import JSZip from "jszip";
 import { cn } from "../lib/utils";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { IconUpload } from "@tabler/icons-react";
 import { useDropzone } from "react-dropzone";
-import JSZip from "jszip";
 import { ProcessFiles } from "../lib/middlewares";
+import config from "../config/config.json";
 
 const mainVariant = {
     initial: {
@@ -45,23 +46,13 @@ export const FileUpload = ({
                 try {
                     const zip = new JSZip();
                     const contents = await zip.loadAsync(file);
-                    const followersFolder = contents.folder("connections/followers_and_following");
+                    const followersFolder = contents.folder(config["connections-folder-directory"]);
                     if (!followersFolder) {
                         alert("Required directory missing");
                         return;
                     }
                     const files = Object.values(followersFolder.files);
-                    const requiredFiles = [
-                        'blocked_profiles.html',
-                        'close_friends.html',
-                        `follow_requests_you've_received.html`,
-                        'followers_1.html',
-                        'following.html',
-                        'hide_story_from.html',
-                        'recent_follow_requests.html',
-                        'recently_unfollowed_profiles.html',
-                        'removed_suggestions.html'
-                    ];
+                    const requiredFiles = config["required-files"];
                     
                     const filteredFiles = files.filter(file => {
                         const fileName = file.name.split('/').pop();

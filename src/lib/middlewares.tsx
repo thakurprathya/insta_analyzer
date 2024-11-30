@@ -36,7 +36,7 @@ async function ProcessFiles(files: JSZipObject[]): Promise<OutputData> {
     const following: Set<string> = new Set(output['following'] || []);
     
     const notFollowingBack: string[] = [...following].filter(link => !followers.has(link));
-    output.notFollowingBack = notFollowingBack;
+    output.not_following_back = notFollowingBack;
     
     return output;
 }

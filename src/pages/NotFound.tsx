@@ -1,5 +1,10 @@
+import { useEffect } from "react";
 
 const NotFound = () => {
+    useEffect(()=>{
+        scrollTo(0, 0);
+    },[])
+
     return (
         <div className="flex items-center justify-center w-full h-full p-10 text-[#FFF6E9]">
             <div className="text-center">

@@ -1,4 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import config from "../config/config.json";
+
+interface Config {
+    Abbreviations: { [key: string]: string }
+}
 
 interface Props {
     links : {[key: string]: any}
@@ -14,7 +19,7 @@ const IndexTable = ({links} : Props) => {
                 <ul className="ml-5 list-disc">
                     {Object.keys(links).map((link) =>
                         <li key={link} className="my-1 text-[#FF7F3E]">
-                            <Link key={link} to={`/link/${link}`} className="inline-block text-[#FFF6E9] transition-transform hover:transform hover:scale-[110%] hover:translate-x-5 duration-300">{link}</Link>
+                            <Link key={link} to={`/link/${link}`} className="inline-block text-[#FFF6E9] transition-transform hover:transform hover:scale-[110%] hover:translate-x-5 duration-300">{(config as Config).Abbreviations[link]}</Link>
                         </li>
                     )}
                 </ul>
