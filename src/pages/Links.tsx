@@ -24,7 +24,7 @@ const Links = ({links} : Props) => {
 
     return (
         <div className='flex flex-col items-center p-10'>
-            <h1 className="font-bold text-xl md:text-2xl text-[#FFF6E9]">{id && (config as Config).Abbreviations[id] + " " + "(" + (id && links[id] ? links[id].length : 0) + ")" }</h1>
+            <h1 className="font-bold text-xl md:text-2xl text-[#FFF6E9] underline decoration-[#FF7F3E]">{id && (config as Config).Abbreviations[id] + " " + "(" + (id && links[id] ? links[id].length : 0) + ")" }</h1>
             <ul className="mt-10 list-disc w-[95%] md:w-[60%] rounded-xl border border-[#FFF6E9] p-5 md:p-7 text-[#FFF6E9]">
                 {Object.keys(links).length === 0 ?
                     <li className="text-sm md:text-md text-[#FF7F3E]">

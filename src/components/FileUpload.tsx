@@ -126,17 +126,17 @@ export const FileUpload = ({
                     <p className="relative z-20 font-sans font-bold text-[#FF7F3E] text-base">
                         Upload file
                     </p>
-                    <p className="relative z-20 font-sans font-normal text-[#4335A7] text-base mt-2">
+                    <p className="relative z-20 font-sans font-normal text-[#0A5EB0] text-base mt-2">
                         Drag or drop .zip file here or click to upload
                     </p>
-                    <div className="relative w-full mt-10 max-w-xl mx-auto bg-[#7cc2e8] rounded-md">
+                    <div className="relative w-full mt-10 max-w-xl mx-auto bg-[#1b1b1e] rounded-md">
                         {files.length > 0 &&
                             files.map((file, idx) => (
                                 <motion.div
                                     key={"file" + idx}
                                     layoutId={idx === 0 ? "file-upload" : "file-upload-" + idx}
                                     className={cn(
-                                        "relative overflow-hidden z-40 bg-[#80C4E9] flex flex-col items-start justify-start md:h-24 p-4 mt-4 w-full mx-auto rounded-md",
+                                        "relative overflow-hidden z-40 bg-[#1A1A1D] flex flex-col items-start justify-start md:h-24 p-4 mt-4 w-full mx-auto rounded-md",
                                         "shadow-sm"
                                     )}
                                 >
@@ -153,13 +153,13 @@ export const FileUpload = ({
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
                                             layout
-                                            className="rounded-lg px-2 py-1 w-fit flex-shrink-0 text-sm text-[#4335A7] bg-[#FFF6E9] shadow-input"
+                                            className="rounded-lg px-2 py-1 w-fit flex-shrink-0 text-sm text-[#0A5EB0] bg-[#FFF6E9] shadow-input"
                                         >
                                             {(file.size / (1024 * 1024)).toFixed(2)} MB
                                         </motion.p>
                                     </div>
 
-                                    <div className="flex text-sm md:flex-row flex-col items-start md:items-center w-full mt-2 justify-between text-[#4335A7]">
+                                    <div className="flex text-sm md:flex-row flex-col items-start md:items-center w-full mt-2 justify-between text-[#0A5EB0]">
                                         <motion.p
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
@@ -190,8 +190,8 @@ export const FileUpload = ({
                                     damping: 20,
                                 }}
                                 className={cn(
-                                    "relative group-hover/file:shadow-2xl z-40 bg-[#80C4E9] flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
-                                    "shadow-[0px_10px_50px_rgba(67,53,167,0.1)]"
+                                    "relative group-hover/file:shadow-2xl z-40 bg-[#1a1a1d] flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
+                                    "shadow-[0px_2px_10px_rgba(67,53,167,0.1)]"
                                 )}
                             >
                                 {isDragActive ? (
@@ -201,7 +201,7 @@ export const FileUpload = ({
                                         className="text-[#FF7F3E] flex flex-col items-center"
                                     >
                                         Drop it
-                                        <IconUpload className="h-4 w-4 text-[#4335A7]" />
+                                        <IconUpload className="h-4 w-4 text-[#0A5EB0]" />
                                     </motion.p>
                                 ) : (
                                     <IconUpload className="h-4 w-4 text-[#FF7F3E]" />
@@ -212,7 +212,7 @@ export const FileUpload = ({
                         {!files.length && (
                             <motion.div
                                 variants={secondaryVariant}
-                                className="absolute opacity-0 border border-dashed border-[#4335A7] inset-0 z-30 bg-transparent flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md"
+                                className="absolute opacity-0 border border-dashed border-[#FF7F3E] inset-0 z-30 bg-transparent flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md"
                             ></motion.div>
                         )}
                     </div>
@@ -234,8 +234,8 @@ export function GridPattern() {
                         <div
                             key={`${col}-${row}`}
                             className={`w-10 h-10 flex flex-shrink-0 rounded-[2px] ${index % 2 === 0
-                                    ? "bg-[#80C4E9]"
-                                    : "bg-[#80C4E9] shadow-[0px_0px_1px_3px_rgba(128,196,233,1)_inset]"
+                                    ? "bg-[#1A1A1D]"
+                                    : "bg-[#1A1A1D] shadow-[0px_0px_2px_1px_rgba(128,196,233,.1)_inset]"
                                 }`}
                         />
                     );

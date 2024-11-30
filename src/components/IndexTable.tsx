@@ -12,7 +12,7 @@ interface Props {
 const IndexTable = ({links} : Props) => {
     return (
         <div className="w-[90%] md:w-[60%] rounded-xl border border-[#FFF6E9] p-5 md:p-7 text-[#FFF6E9]">
-            <h2 className="text-[16px] md:text-[20px] text-md">Available Routes</h2>
+            <h2 className="text-[16px] md:text-[20px] text-md underline decoration-[#FF7F3E]">Available Routes</h2>
             {Object.keys(links).length === 0 ?
                 <p className="m-2 text-sm md:text-md">No Routes Available</p>
             :
