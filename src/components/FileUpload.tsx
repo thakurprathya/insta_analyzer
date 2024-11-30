@@ -28,12 +28,12 @@ const secondaryVariant = {
 };
 
 interface FileUploadProps {
-    setConnections: React.Dispatch<React.SetStateAction<{[key: string]: any}>>;
+    setLinks: React.Dispatch<React.SetStateAction<{[key: string]: any}>>;
     onChange?: (files: File[]) => void;
 }
 
 export const FileUpload = ({
-    setConnections,
+    setLinks,
     onChange,
 }: FileUploadProps) => {
     const [files, setFiles] = useState<File[]>([]);
@@ -69,7 +69,7 @@ export const FileUpload = ({
                     });
 
                     const results = await ProcessFiles(filteredFiles);
-                    setConnections(results);
+                    setLinks(results);
                     
                 } catch (error) {
                     console.error("Error processing files:", error);

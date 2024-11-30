@@ -1,18 +1,15 @@
-import { useEffect, useState } from "react"
-import { FileUpload } from "./components/FileUpload"
-import IndexTable from "./components/IndexTable"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
-    const [connections, setConnections] = useState({});
-
-    useEffect(()=>{console.log(connections)},[connections])
-
     return (
-        <div className="flex flex-col items-center justify-center p-7 md:p-10 gap-10">
-            <h1 className="font-bold text-xl md:text-2xl text-[#FFF6E9]">Instagram Connection Analyzer</h1>
-            <FileUpload setConnections={setConnections}/>
-            <IndexTable connections={connections}/>
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+      </Router>
     )
 }
 
