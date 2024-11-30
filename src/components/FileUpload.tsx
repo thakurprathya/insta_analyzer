@@ -42,7 +42,7 @@ export const FileUpload = ({
 
     const HandleFileChange = async (newFiles: File[]) => {
         for (const file of newFiles) {
-            if (file.type === "application/zip") {
+            if (file.type === "application/zip" || file.type === "application/x-zip-compressed") {
                 try {
                     const zip = new JSZip();
                     const contents = await zip.loadAsync(file);
