@@ -14,7 +14,7 @@ const App = () => {
                 <Route path="/link/:id" element={<Links links={links}/>} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
-      </Router>
+        </Router>
     )
 }
 

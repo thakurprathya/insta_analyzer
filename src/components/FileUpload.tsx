@@ -190,7 +190,7 @@ export const FileUpload = ({
                                     damping: 20,
                                 }}
                                 className={cn(
-                                    "relative group-hover/file:shadow-2xl z-40 bg-[#1a1a1d] flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
+                                    "relative group-hover/file:shadow-lg z-40 bg-[#1a1a1d] flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
                                     "shadow-[0px_2px_10px_rgba(67,53,167,0.1)]"
                                 )}
                             >
